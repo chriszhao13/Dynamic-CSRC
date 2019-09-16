@@ -1,0 +1,3 @@
+/home/victor/Documentos/DCSR/build/CMakeFiles/rebuild_cache.dir
+/home/victor/Documentos/DCSR/build/CMakeFiles/DCSR.dir
+/home/victor/Documentos/DCSR/build/CMakeFiles/edit_cache.dir
