@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/DCSR.dir/dcsr.cpp.o CMakeFiles/DCSR.dir/main.cpp.o  -o DCSR 

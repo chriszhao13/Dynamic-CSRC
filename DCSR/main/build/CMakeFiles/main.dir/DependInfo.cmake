@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/victor/Documentos/DCSR/dcsr.cpp" "/home/victor/Documentos/DCSR/build/CMakeFiles/DCSR.dir/dcsr.cpp.o"
-  "/home/victor/Documentos/DCSR/main.cpp" "/home/victor/Documentos/DCSR/build/CMakeFiles/DCSR.dir/main.cpp.o"
+  "/home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.cpp" "/home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles/main.dir/dcsr.cpp.o"
+  "/home/victor/Documentos/Dynamic-CSRC/DCSR/main/main.cpp" "/home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles/main.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

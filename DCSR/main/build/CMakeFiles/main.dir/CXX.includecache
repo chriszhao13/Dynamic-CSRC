@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.cpp
+dcsr.h
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.h
+
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.h
+iostream
+-
+
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/main.cpp
+iostream
+-
+dcsr.h
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.h
+

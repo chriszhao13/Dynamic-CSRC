@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/victor/Documentos/DCSR
+CMAKE_SOURCE_DIR = /home/victor/Documentos/Dynamic-CSRC/DCSR/main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/victor/Documentos/DCSR/build
+CMAKE_BINARY_DIR = /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/victor/Documentos/DCSR/build/CMakeFiles /home/victor/Documentos/DCSR/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/victor/Documentos/DCSR/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DCSR
+# Target rules for targets named main
 
 # Build rule for target.
-DCSR: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DCSR
-.PHONY : DCSR
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-DCSR/fast:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/build
-.PHONY : DCSR/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 dcsr.o: dcsr.cpp.o
 
@@ -129,7 +129,7 @@ dcsr.o: dcsr.cpp.o
 
 # target to build an object file
 dcsr.cpp.o:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/dcsr.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dcsr.cpp.o
 .PHONY : dcsr.cpp.o
 
 dcsr.i: dcsr.cpp.i
@@ -138,7 +138,7 @@ dcsr.i: dcsr.cpp.i
 
 # target to preprocess a source file
 dcsr.cpp.i:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/dcsr.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dcsr.cpp.i
 .PHONY : dcsr.cpp.i
 
 dcsr.s: dcsr.cpp.s
@@ -147,7 +147,7 @@ dcsr.s: dcsr.cpp.s
 
 # target to generate assembly for a file
 dcsr.cpp.s:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/dcsr.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/dcsr.cpp.s
 .PHONY : dcsr.cpp.s
 
 main.o: main.cpp.o
@@ -156,7 +156,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -165,7 +165,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/DCSR.dir/build.make CMakeFiles/DCSR.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -184,7 +184,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... DCSR"
+	@echo "... main"
 	@echo "... edit_cache"
 	@echo "... dcsr.o"
 	@echo "... dcsr.i"
