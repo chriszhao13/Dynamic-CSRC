@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 
-project(DCSR)
+project(main)
 
 set( project_sources
     dcsr.cpp
