@@ -17,11 +17,12 @@ private:
     size_t matrix_size;
     long pitch; // Distância para o próximo segmento.
     int seg_size; //Tamanho do segmento.
+    long *seg_ptr; //Ponteiro para a identificação do índice do segmento atual.
 
 public:
     DCSR(int seg_size = 4);
     explicit DCSR(long *offsets, long *col_indices,
-                  long *values, long *row_sizes, size_t matrix_size, int seg_size = 4);
+                  long *values, long *row_sizes, size_t matrix_size, long *seg_ptr, int seg_size = 4);
 
     ~DCSR();
     //Alocando segmentos e definindo os tamanhos dos vetores.

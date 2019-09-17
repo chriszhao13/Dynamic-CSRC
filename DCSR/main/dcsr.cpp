@@ -5,18 +5,20 @@ user::DCSR::DCSR(int seg_size) :
     col_indices(),
     values(),
     row_sizes(),
+    seg_ptr(),
     seg_size(seg_size)
 {}
 
 
 user::DCSR::DCSR(long *offsets, long *col_indices,
-           long *values, long *row_sizes, size_t matrix_size, int seg_size) :
+           long *values, long *row_sizes, size_t matrix_size, long *seg_ptr, int seg_size) :
     offsets(offsets),
     col_indices(col_indices),
     values(values),
     row_sizes(row_sizes),
     matrix_size(matrix_size),
     pitch(matrix_size * 2),
+    seg_ptr(seg_ptr),
     seg_size(seg_size)
 {}
 
@@ -24,6 +26,7 @@ user::DCSR::~DCSR() {
     offsets = nullptr;
     col_indices = nullptr;
     values = nullptr;
+    seg_ptr = nullptr;
     row_sizes = nullptr;
 }
 
@@ -68,9 +71,10 @@ void user::DCSR::AllocSegments(long *B_offsets, long *B_cols, long *B_vals) {
         free_memory = seg_end - seg_start;
 
         if (free_memory < B_row_len && B_row_len > 0) {
-            //ALocando memória dos segmentos, alterado da função atomicAdd.
-//            offsets[(sid + 1) * pitch + (row * 2)] = offsets[(2 * matrix_size) - 1];
-//            offsets[(sid + 1) * pitch + (row * 2) + 1] = offsets[(2 * matrix_size) - 1] + seg_size;
+            //Alocando memória dos segmentos, alterado da função atomicAdd.
+           offsets[(sid + 1) * pitch + (row * 2)] = *seg_ptr;
+           offsets[(sid + 1) * pitch + (row * 2) + 1] = *seg_ptr + seg_size;
+           seg_ptr = &offsets[(sid + 1) * pitch + (row * 2) + 1];
         }
         //Algoritmo para a inserção de elementos, implementar depois.
         InsertElements(B_offsets, B_cols, B_vals, row, idx, sid);
