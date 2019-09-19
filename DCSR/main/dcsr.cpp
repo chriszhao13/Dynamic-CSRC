@@ -68,7 +68,7 @@ void user::DCSR::AllocSegments(long *B_offsets, long *B_cols, long *B_vals) {
         else idx = seg_start; //Precisa de melhor entendimento.
         std::cout << "idx (linha 64) = " << idx <<'\n';
         std::cout << "======================================================================" << '\n';
-        free_memory = seg_end - seg_start;
+        free_memory = seg_end - seg_start - row_len;
 
         if (free_memory < B_row_len && B_row_len > 0) {
             //Alocando memória dos segmentos, alterado da função atomicAdd.
