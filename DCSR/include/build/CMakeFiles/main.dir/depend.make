@@ -4,6 +4,7 @@
 CMakeFiles/main.dir/dcsr.cpp.o: ../dcsr.cpp
 CMakeFiles/main.dir/dcsr.cpp.o: ../dcsr.h
 
+CMakeFiles/main.dir/main.cpp.o: ../bp_alloc.h
 CMakeFiles/main.dir/main.cpp.o: ../dcsr.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 

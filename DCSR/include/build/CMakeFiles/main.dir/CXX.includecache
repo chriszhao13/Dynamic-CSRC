@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/bp_alloc.h
+memory
+-
+functional
+-
+utility
+-
+stdexcept
+-
+list
+-
+
 /home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.cpp
 dcsr.h
 /home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.h
@@ -19,4 +31,6 @@ iostream
 -
 dcsr.h
 /home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.h
+bp_alloc.h
+/home/victor/Documentos/Dynamic-CSRC/DCSR/main/bp_alloc.h
 

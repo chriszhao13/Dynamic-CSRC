@@ -10,6 +10,7 @@ set( project_sources
 
 set ( HEADERS
     dcsr.h
+    bp_alloc.h
 )
 
 add_executable(${PROJECT_NAME} ${project_sources} ${HEADERS})
