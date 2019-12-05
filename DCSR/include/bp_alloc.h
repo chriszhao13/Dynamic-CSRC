@@ -81,7 +81,7 @@ public:
 
     //Adição de elementos. Direta.
     T* back_push(const T data) {
-        this->access(lenght) = data;lenght++;
+        this->access(lenght++) = data;
         return &this->access(lenght);
     }
 
@@ -90,13 +90,15 @@ public:
 
     // Remove o elemento do vetor.
     void remove(size_t pos) {
-
         pos = index_convert(pos);
         list_it it = removed.begin();
-        for(;pos > *it && it != removed.end(); ++it);
-        ++it;
-        if(pos > *it) {removed.push_back(pos);}
-        else {removed.insert(it, pos);}
+        while (it != removed.end()) {
+          if (*it > pos)
+            break;
+          ++it;
+        }
+        if (it == removed.end()) { removed.push_back(pos); }
+        else { removed.insert(it, pos); }
         lenght--;
     }
 
