@@ -32,7 +32,6 @@ protected:
     // Acesso interno ao elementos.
     T &access (size_t i) {
         size_t pos = index_convert(i);
-        // std::cout << pos << '\n';
         return storage.get()[pos];
     }
 
@@ -59,12 +58,11 @@ public:
 
     explicit bp_alloc (T* first, T* second): removed() {
         define_max_buffer();
-        storage = std::make_shared<T>(max_size);
+        storage = std::shared_ptr<T>(new T[max_size], std::default_delete<T[]>());
         T* it; //iterador.
         size_t i = 0;
         for(it = first; it != second; ++it, ++i) {
             storage.get()[i] = *it; //cópia direta.
-            // std::cout << storage.get()[i] << '\n';
         }
         this->lenght = i;
     }

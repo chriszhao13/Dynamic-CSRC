@@ -9,7 +9,7 @@ int main() {
 
     double *stor = new double [MAX_SIZE] {1.23,2.23,3,4.12,5.12,0.6,7,8,9};
     user::bp_alloc<double> a(stor, (stor + 5));
-    std::cout << a[2] << '\n';
+    std::cout << a[1] << '\n';
 
 
     // std::cout << a[9] << '\n';
