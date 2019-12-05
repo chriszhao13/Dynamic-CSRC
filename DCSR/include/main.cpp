@@ -7,21 +7,20 @@ void print_(long *buffer);
 
 int main() {
 
-    long *stor = new long [MAX_SIZE] {1,2,3,4,5,6,7,8,9};
-
-    user::bp_alloc<long> a(stor, 9);
+    double *stor = new double [MAX_SIZE] {1.23,2.23,3,4.12,5.12,0.6,7,8,9};
+    user::bp_alloc<double> a(stor, (stor + 5));
     std::cout << a[2] << '\n';
 
 
     // std::cout << a[9] << '\n';
     // std::cout << a.size() << '\n';
-    a.remove(1);
-    std::cout << a[7] << '\n';
-    a.remove(7);
+    // a.remove(1);
     // std::cout << a[7] << '\n';
-    a.back_push(100);
-    a.print_rev();
-    a.print_();
+    // a.remove(7);
+    // // std::cout << a[7] << '\n';
+    // a.back_push(100);
+    // a.print_rev();
+    // a.print_();
     // std::cout << a.size() << '\n';
     // long *offsets = new long [MAX_SIZE] {0,4,4,8,8,12,12,16,-1,-1,-1,-1,-1,-1,-1,-1}; //Segmentos de tamanho 4.
     // long *off_ptr = &offsets[7];

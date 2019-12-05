@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/victor/Documentos/Dynamic-CSRC/DCSR/main
+CMAKE_SOURCE_DIR = /home/victor/Documentos/Dynamic-CSRC/DCSR/include
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build
+CMAKE_BINARY_DIR = /home/victor/Documentos/Dynamic-CSRC/DCSR/include/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/dcsr.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/dcsr.cpp.o: ../dcsr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/dcsr.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/dcsr.cpp.o -c /home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victor/Documentos/Dynamic-CSRC/DCSR/include/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/dcsr.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/dcsr.cpp.o -c /home/victor/Documentos/Dynamic-CSRC/DCSR/include/dcsr.cpp
 
 CMakeFiles/main.dir/dcsr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/dcsr.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.cpp > CMakeFiles/main.dir/dcsr.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor/Documentos/Dynamic-CSRC/DCSR/include/dcsr.cpp > CMakeFiles/main.dir/dcsr.cpp.i
 
 CMakeFiles/main.dir/dcsr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/dcsr.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor/Documentos/Dynamic-CSRC/DCSR/main/dcsr.cpp -o CMakeFiles/main.dir/dcsr.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor/Documentos/Dynamic-CSRC/DCSR/include/dcsr.cpp -o CMakeFiles/main.dir/dcsr.cpp.s
 
 CMakeFiles/main.dir/dcsr.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/main.dir/dcsr.cpp.o.provides.build: CMakeFiles/main.dir/dcsr.cpp.o
 
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/victor/Documentos/Dynamic-CSRC/DCSR/main/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victor/Documentos/Dynamic-CSRC/DCSR/include/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/victor/Documentos/Dynamic-CSRC/DCSR/include/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor/Documentos/Dynamic-CSRC/DCSR/main/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor/Documentos/Dynamic-CSRC/DCSR/include/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor/Documentos/Dynamic-CSRC/DCSR/main/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor/Documentos/Dynamic-CSRC/DCSR/include/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 CMakeFiles/main.dir/main.cpp.o.requires:
 
@@ -117,7 +117,7 @@ main: CMakeFiles/main.dir/dcsr.cpp.o
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victor/Documentos/Dynamic-CSRC/DCSR/include/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/victor/Documentos/Dynamic-CSRC/DCSR/main /home/victor/Documentos/Dynamic-CSRC/DCSR/main /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build /home/victor/Documentos/Dynamic-CSRC/DCSR/main/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/victor/Documentos/Dynamic-CSRC/DCSR/include/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/victor/Documentos/Dynamic-CSRC/DCSR/include /home/victor/Documentos/Dynamic-CSRC/DCSR/include /home/victor/Documentos/Dynamic-CSRC/DCSR/include/build /home/victor/Documentos/Dynamic-CSRC/DCSR/include/build /home/victor/Documentos/Dynamic-CSRC/DCSR/include/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

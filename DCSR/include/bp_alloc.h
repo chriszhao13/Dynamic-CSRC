@@ -22,6 +22,7 @@ private:
     pointer_type storage;
     std::list<size_t> removed; //Lista com os índices dos elementos removidos.
     size_t lenght; //tamanho.
+    size_t max_size;
 
     typedef typename std::list<size_t>::iterator list_it;
     typedef typename std::list<size_t>::const_iterator const_list_it;
@@ -31,6 +32,7 @@ protected:
     // Acesso interno ao elementos.
     T &access (size_t i) {
         size_t pos = index_convert(i);
+        // std::cout << pos << '\n';
         return storage.get()[pos];
     }
 
@@ -48,13 +50,34 @@ protected:
         return pos;
     }
 
+    // IMPLEMENTAR DEPOIS....
+    void define_max_buffer() {this->max_size = 1024;}
+
 public:
 
     // Construtores.
 
-    explicit bp_alloc (T *data, size_t lenght): storage(std::move(data)), lenght(lenght) {};
-    explicit bp_alloc (size_t lenght): storage(std::make_shared<T>(lenght)), lenght(lenght) {};
-    bp_alloc () : storage(std::make_shared<T>(0)), removed(),lenght(0){};
+    explicit bp_alloc (T* first, T* second): removed() {
+        define_max_buffer();
+        storage = std::make_shared<T>(max_size);
+        T* it; //iterador.
+        size_t i = 0;
+        for(it = first; it != second; ++it, ++i) {
+            storage.get()[i] = *it; //cópia direta.
+            // std::cout << storage.get()[i] << '\n';
+        }
+        this->lenght = i;
+    }
+
+
+    explicit bp_alloc (T* vec, size_t lenght): removed(), lenght(lenght) {
+        define_max_buffer();
+        storage = std::make_shared<T>(max_size);
+        size_t i = 0;
+        for(T* it = vec; i > lenght; ++it, ++i) {storage.get()[i] = *it;}
+    }
+
+    bp_alloc (size_t lenght) : storage(std::make_shared<T>(lenght)), lenght(lenght), removed() {define_max_buffer;}
 
     ~bp_alloc (){};
 
