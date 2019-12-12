@@ -70,12 +70,17 @@ public:
 
     explicit bp_alloc (T* vec, size_t lenght): removed(), lenght(lenght) {
         define_max_buffer();
-        storage = std::make_shared<T>(max_size);
+        // Inicialização do storage com a cópia de uma instanciação. Necessário para a implementação da função delete.
+        // Make_shared cria vários tipos de objetos T[] e o delete é padrão para um objeto. Isso causa a fragmentação.
+        storage = std::shared_ptr<T>(new T[max_size], std::default_delete<T[]>());
         size_t i = 0;
         for(T* it = vec; i > lenght; ++it, ++i) {storage.get()[i] = *it;}
     }
 
-    bp_alloc (size_t lenght) : storage(std::make_shared<T>(lenght)), lenght(lenght), removed() {define_max_buffer;}
+    bp_alloc (size_t lenght) : lenght(lenght), removed() {
+        define_max_buffer;
+        storage = std::shared_ptr<T>(new T[max_size], std::default_delete<T[]>());
+    }
 
     ~bp_alloc (){};
 
